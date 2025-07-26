@@ -34,6 +34,9 @@ public class Main {
         MyResolver.multipleOf3or5();
 
         // Solve Even Fibonacci Numbers
-        MyResolver.EvenFibonacciNumbers();
+        MyResolver.evenFibonacciNumbers();
+
+        // Solve Largest Prime Factor
+        MyResolver.largestPrimeFactor(600851475143L);
     }
 }

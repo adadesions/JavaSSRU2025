@@ -13,7 +13,7 @@ public class MyResolver {
         System.out.printf("Sum of multiples of 3 or 5 below 1000: %d%n", result);
     }
 
-    public static void EvenFibonacciNumbers() {
+    public static void evenFibonacciNumbers() {
         // 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, ...
         int t0 = 1;
         int t1 = 2;
@@ -30,5 +30,24 @@ public class MyResolver {
         }
 
         System.out.printf("Sum of even Fibonacci numbers below 4 million: %d%n", sum);
+    }
+
+    public static void largestPrimeFactor(long num) {
+        System.out.printf("Largest prime factor of %d ", num);
+        int factor = 2;
+        int counter = 0;
+
+        while (num > 1) {
+            if (num % factor == 0) {
+                num = num / factor;
+            } else {
+                factor++;
+            }
+
+            counter++;
+        }
+
+        System.out.printf(": %d%n", factor);
+        System.out.printf("Total iterations: %d%n", counter);
     }
 }
