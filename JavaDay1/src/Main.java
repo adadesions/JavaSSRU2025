@@ -1,5 +1,5 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import MathProblems.MyResolver;
+
 public class Main {
     private static float pythagoreanTheorem(float a, float b) {
         return (float) Math.sqrt(a * a + b * b);
@@ -30,5 +30,7 @@ public class Main {
         System.out.println("Is 22 even? : " + isEven);
 
         printMinNumber(4.5, 3.2);
+
+        MyResolver.multipleOf3or5();
     }
 }
