@@ -2,7 +2,7 @@ package MyCollections;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class ArrayProblemsTest {
     @Test
@@ -38,5 +38,12 @@ public class ArrayProblemsTest {
         int[] input = {};
         int expected = Integer.MIN_VALUE; // Assuming the method returns Integer.MIN_VALUE for empty arrays
         assertEquals(expected, ArrayProblems.findMax(input));
+    }
+
+    @Test
+    public void testNullArray() {
+        int[] input = null;
+        assertThrows(IllegalArgumentException.class, () -> ArrayProblems.findMax(input)
+        , "Input array cannot be null");
     }
 }
