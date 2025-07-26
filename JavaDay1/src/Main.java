@@ -32,5 +32,8 @@ public class Main {
         printMinNumber(4.5, 3.2);
 
         MyResolver.multipleOf3or5();
+
+        // Solve Even Fibonacci Numbers
+        MyResolver.EvenFibonacciNumbers();
     }
 }
