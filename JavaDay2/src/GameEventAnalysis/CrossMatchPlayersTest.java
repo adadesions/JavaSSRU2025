@@ -113,7 +113,7 @@ public class CrossMatchPlayersTest {
                 "Hannah"));
 
         CrossMatchPlayers crossMatchPlayers = new CrossMatchPlayers(numEventA, numEventB, playersList);
-        HashSet<String>[] result = crossMatchPlayers.separatePlayerNames();
+        HashSet<String>[] result = crossMatchPlayers.wrapSeparatePlayerNames();
         assertArrayEquals(expected, result);
     }
 }

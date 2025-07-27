@@ -3,7 +3,7 @@ package GameEventAnalysis;
 import java.util.Arrays;
 import java.util.HashSet;
 
-public class CrossMatchPlayers {
+public class CrossMatchPlayers { //Create By LoveCode Team
     private final String[] playersList;
     private final int numEventA;
     private final int numEventB;
@@ -29,7 +29,7 @@ public class CrossMatchPlayers {
         return tempSetA.stream().sorted().toArray(String[]::new);
     }
 
-    public String[] getPlayersInOneEvent() { // MaiiLoveCode
+    public String[] getPlayersInOneEvent() { // Create by MaiiLoveCode
         String[] unionStr = getPlayersInAtLeastOneEvent();
         HashSet<String> union = new HashSet<>(Arrays.asList(unionStr));
 
@@ -42,7 +42,7 @@ public class CrossMatchPlayers {
         return union.stream().sorted().toArray(String[]::new);
     }
 
-    public String[] getPlayersInAtLeastOneEvent() { // Create By  โค้ด
+    public String[] getPlayersInAtLeastOneEvent() { // Create By MossLoveCode
         HashSet<String> tempSetA = new HashSet<>(setA);
         HashSet<String> tempSetB = new HashSet<>(setB);
 
@@ -50,7 +50,7 @@ public class CrossMatchPlayers {
         return tempSetA.stream().sorted().toArray(String[]::new);
     }
 
-    public HashSet<String>[] separatePlayerNames() {
+    private HashSet<String>[] separatePlayerNames() { // Create By AdaLoveCode
         HashSet<String>[] sepPlayersList = (HashSet<String>[]) new HashSet<?>[2];
         sepPlayersList[0] = new HashSet<>();
         sepPlayersList[1] = new HashSet<>();
@@ -64,6 +64,10 @@ public class CrossMatchPlayers {
         }
 
         return sepPlayersList;
+    }
+
+    public HashSet<String>[] wrapSeparatePlayerNames() {
+        return separatePlayerNames();
     }
 }
 
