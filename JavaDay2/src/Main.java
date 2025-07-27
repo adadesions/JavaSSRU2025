@@ -1,10 +1,9 @@
 import MyCollections.MyList;
 import MyCollections.MyMap;
+import MyCollections.MyQueue;
+import MyCollections.MyStack;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.List;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -47,6 +46,47 @@ public class Main {
         System.out.println("===== Crypto Market Data =====");
         MyMap.printMap(cryptoMarket);
 
+        // Example of using MyStack
+        System.out.println("===== Book Stack =====");
+        MyStack bookStack = new MyStack();
+        bookStack.pushBook("The Catcher in the Rye");
+        bookStack.pushBook("To Kill a Mockingbird");
+        bookStack.pushBook("1984");
+
+        bookStack.printStack();
+        System.out.println("Top book: " + bookStack.lookAtTopBook());
+        bookStack.printStack();
+        System.out.println("Popped book: " + bookStack.popBook());
+        bookStack.printStack();
+
+
+        System.out.println("===== Queue Section =====");
+        MyQueue mhalaQueue = new MyQueue();
+        mhalaQueue.enqueue("Ada");
+        mhalaQueue.enqueue("Bola");
+        mhalaQueue.enqueue("Mossda");
+        mhalaQueue.enqueue("Muuda");
+
+        while (mhalaQueue.NotEmpty()) {
+            try {
+                System.out.println("Next in queue: " + mhalaQueue.dequeue());
+                Thread.sleep(2000); // Simulate processing time
+            } catch (InterruptedException e) {
+                System.err.println("Thread was interrupted: " + e.getMessage());
+            }
+        }
+
+        System.out.println("Queue is now empty.");
+
+        // Priority Queue Example
+        System.out.println("===== Priority Queue Section =====");
+        Queue<Integer> orthopedicQueue = new PriorityQueue<>(Comparator.reverseOrder());
+        orthopedicQueue.add(35);
+        orthopedicQueue.add(20);
+        orthopedicQueue.add(50);
+        orthopedicQueue.add(100);
+
+        System.out.println("Priority Queue : " + orthopedicQueue);
     }
 }
 
