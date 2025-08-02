@@ -23,7 +23,7 @@ public class PrefixExpressionProblem {
         return stack.pop();
     }
 
-    private static int applyOperation(int num1, int num2, String operator) {
+    public static int applyOperation(int num1, int num2, String operator) {
         return switch (operator) {
             case "+" -> num1 + num2;
             case "-" -> num1 - num2;
@@ -33,7 +33,7 @@ public class PrefixExpressionProblem {
         };
     }
 
-    private static boolean isOperator(String token) {
+    public static boolean isOperator(String token) {
         return token.equals("+") || token.equals("-") || token.equals("*") || token.equals("/");
     }
 }
