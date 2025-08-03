@@ -23,7 +23,7 @@ public class ThunderExpressProblem {
                 }
             }
         }
-        
+
         // Impossible case
         if (table[shipmentWeight] > shipmentWeight) {
             return -1;
