@@ -1,7 +1,6 @@
 package StackProblems;
 
 import java.util.Stack;
-import static StackProblems.PrefixExpressionProblem.isOperator;
 
 public class ConvertPrefixToPostfixProblem {
 
@@ -26,6 +25,10 @@ public class ConvertPrefixToPostfixProblem {
         }
 
         return stack.pop();
+    }
+
+    private static boolean isOperator(String token) {
+        return "+-*/%^".contains(token);
     }
 
 }
